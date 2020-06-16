@@ -1,0 +1,23 @@
+body{
+  overflow: hidden
+}
+
+.name{
+  position: absolute;
+}
+
+.lightText{
+  color:#eeeeee;
+}
+
+.footer{
+  align-self: flex-end;
+  width:200px;
+  margin-bottom: 10px;
+}
+
+.icon{
+  color:#eeeeee;
+  margin-right: 10px;
+  margin-left: 10px;
+}
