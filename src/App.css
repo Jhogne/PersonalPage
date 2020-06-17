@@ -1,13 +1,15 @@
-body{
-  overflow: hidden
+.html, body {
+  height: 100%;
 }
 
 .name{
   position: absolute;
+  font-size: 2.5rem;
 }
 
 .lightText{
   color:#eeeeee;
+  font-size: 2rem;
 }
 
 .footer{
@@ -20,4 +22,15 @@ body{
   color:#eeeeee;
   margin-right: 10px;
   margin-left: 10px;
+}
+
+.content{
+  border-style: solid;
+  border-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+  text-Align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
