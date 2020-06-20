@@ -1,7 +1,5 @@
 .html, body {
-  height: 100%;  
-  overflow-x: hidden;
-
+  height: 100%; 
 }
 
 .footer{
@@ -20,7 +18,9 @@
 .content{
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
+
 
 .content-header.content-header {
   color: #777777;
