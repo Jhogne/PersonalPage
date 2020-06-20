@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Sidebar.module.css'
+import styles from 'components/Sidebar.module.css'
 
 const TOPHEIGHT = '300px'
 const SIDEWIDTH = '700px'
@@ -30,10 +30,9 @@ function LeftBar(props) {
   );
 }
 
-
 class Sidebar extends React.Component {
   render() {
-    if (this.props.topBar) {
+    if (this.props.forMobile) {
       return <TopBar> {this.props.children}</TopBar>
     } else {
       return <LeftBar> {this.props.children}</LeftBar>

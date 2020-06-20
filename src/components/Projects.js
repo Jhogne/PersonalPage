@@ -1,18 +1,22 @@
 import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
-import ProjectData from '../data/projects'
+import ProjectData from 'data/ProjectList'
 
-import ProjectCardDemo from './ProjectCardDemo'
+import ProjectCard from 'components/ProjectCard'
 
 function Projects() {
   const gridItems = ProjectData.map((content) =>
-    <Grid item key={content.title}>
-      <ProjectCardDemo content={content} />
+    <Grid 
+      item 
+      key={content.title}>
+      <ProjectCard content={content} />
     </Grid>
   );
   return (
-    <Grid container justify='center' spacing={4}>
+    <Grid 
+      container 
+      spacing={4}>
       {gridItems}
     </Grid>
   );
