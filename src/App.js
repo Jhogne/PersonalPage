@@ -37,22 +37,21 @@ class App extends React.Component {
           container 
           className="bar"
           style={{
-            overflow: this.state.isMobile ? 'visible' : 'hidden'
+            overflowY: this.state.isMobile ? 'visible' : 'hidden'
           }}
-          >
+          >          
           <Grid item>
             <ReactiveBar forMobile={this.state.isMobile}/>
           </Grid>
           <Grid 
             item 
             xs 
-            className='content' 
+            className='content'
             style={{
               maxHeight: contentHeight,
-              overflowY: this.state.isMobile ? 'visible' : 'auto',
+              overflowY: this.state.isMobile ? 'visible' : 'auto',  
               overflowX: this.state.isMobile ? 'visible' : 'hidden',
-              paddingLeft: this.state.isMobile ? 0: '25px',
-
+              paddingLeft: this.state.isMobile ? '0.5px': '25px',
             }}>
             <Typography 
               variant="h2" 
@@ -68,3 +67,8 @@ class App extends React.Component {
   }
 }
 export default App;
+
+
+//overflowY: this.state.isMobile ? 'visible' : 'auto',
+//overflowX: this.state.isMobile ? 'auto' : 'hidden',
+//paddingLeft: this.state.isMobile ? 0: '25px',
