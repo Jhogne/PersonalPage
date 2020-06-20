@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from 'components/Sidebar.module.css'
+import styles from 'styles/Sidebar.module.css'
 
 const TOPHEIGHT = '300px'
 const SIDEWIDTH = '700px'

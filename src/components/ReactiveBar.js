@@ -7,7 +7,7 @@ import MailIcon from '@material-ui/icons/Mail'
 import GithubIcon from '@material-ui/icons/GitHub'
 import cx from 'classnames'
 
-import styles from 'components/ReactiveBar.module.css'
+import styles from 'styles/ReactiveBar.module.css'
 
 function ReactiveBar(props) {
   return (

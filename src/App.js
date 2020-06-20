@@ -1,15 +1,13 @@
 import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
-
-import './App.css';
-import Sidebar from './components/Sidebar';
-import Projects from './components/Projects';
-
-import LinkedinIcon from '@material-ui/icons/LinkedIn'
-import MailIcon from '@material-ui/icons/Mail'
-import GithubIcon from '@material-ui/icons/GitHub'
 import { Typography } from '@material-ui/core';
+
+import Projects from 'components/Projects';
+import ReactiveBar from 'components/ReactiveBar'
+
+import 'styles/App.css';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -27,23 +25,24 @@ class App extends React.Component {
   }
 
   render() {
-    const contentHeight = this.state.isMobile ? (window.innerHeight - 300) + 'px' : '100vh';
+    const contentHeight = this.state.isMobile ? (window.innerHeight - 300) : '100vh';
     return (
-      <Grid container>
+      <Grid 
+        container 
+        className="bar">
         <Grid item>
-          <Sidebar topBar={this.state.isMobile} style={{ position: 'fixed' }}>
-            <Typography className="lightText name" variant="overline" style={{ fontSize: '2.5rem' }}>Jonas Högne </Typography>
-            <div className="footer">
-              <hr style={{ backgroundColor: '#eeeeee' }} />
-              <a href="https://www.github.com/JHogne"><GithubIcon className="icon" style={{ fontSize: 32 }} /></a>
-              <a href="mailto:jonas.hogne@gmail.com"><MailIcon className="icon" style={{ fontSize: 32 }} /></a>
-              <a href="https://www.linkedin.com/in/jonas-högne-661901170">
-                <LinkedinIcon className="icon" style={{ fontSize: 32 }} /></a>
-            </div>
-          </Sidebar>
+          <ReactiveBar forMobile={this.state.isMobile}/>
         </Grid>
-        <Grid item xs className='content' style={{ maxHeight: contentHeight }}>
-          <Typography variant="h6" style={{ marginTop: '50px', marginBottom: '30px', fontSize: '2rem' }}>What I have done</Typography>
+        <Grid 
+          item 
+          xs 
+          className='content' 
+          style={{maxHeight: contentHeight }}>
+          <Typography 
+            variant="h2" 
+            className='content-header'>
+            What I have done
+          </Typography>
           <Projects />
         </Grid>
       </Grid>

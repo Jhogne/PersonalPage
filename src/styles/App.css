@@ -1,20 +1,12 @@
 .html, body {
   height: 100%;
-}
-
-.name{
-  position: absolute;
-  font-size: 2.5rem;
-}
-
-.lightText{
-  color:#eeeeee;
-  font-size: 2rem;
+  overflow: hidden;
 }
 
 .footer{
-  align-self: flex-end;
+  position:absolute;
   width:200px;
+  bottom:0;
   margin-bottom: 10px;
 }
 
@@ -25,12 +17,23 @@
 }
 
 .content{
-  border-style: solid;
-  border-color: transparent;
-
   display: flex;
   flex-direction: column;
-  text-Align: center;
   overflow-y: auto;
   overflow-x: hidden;
+
+  padding-left:25px;
+}
+
+.content-header.content-header {
+  color: #777777;
+  padding-top:50px;
+  padding-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+.bar{
+  position: absolute;
+  top: 0;
+  left: 0;
 }
