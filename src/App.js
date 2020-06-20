@@ -29,7 +29,11 @@ class App extends React.Component {
     return (
       <Grid 
         container 
-        className="bar">
+        className="bar"
+        style={{
+          overflow: this.state.isMobile ? 'visible' : 'hidden'
+        }}
+        >
         <Grid item>
           <ReactiveBar forMobile={this.state.isMobile}/>
         </Grid>
@@ -37,13 +41,18 @@ class App extends React.Component {
           item 
           xs 
           className='content' 
-          style={{maxHeight: contentHeight }}>
+          style={{
+            maxHeight: contentHeight,
+            overflowY: this.state.isMobile ? 'visible' : 'auto',
+            overflowX: this.state.isMobile ? 'visible' : 'hidden',
+          }}>
           <Typography 
             variant="h2" 
-            className='content-header'>
+            className='content-header'
+            style={{alignSelf:this.state.isMobile ? 'center' : 'auto'}}>
             What I have done
           </Typography>
-          <Projects />
+          <Projects forMobile={this.state.isMobile} />
         </Grid>
       </Grid>
     );

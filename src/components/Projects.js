@@ -5,7 +5,7 @@ import ProjectData from 'data/ProjectList'
 
 import ProjectCard from 'components/ProjectCard'
 
-function Projects() {
+function Projects(props) {
   const gridItems = ProjectData.map((content) =>
     <Grid 
       item 
@@ -16,7 +16,8 @@ function Projects() {
   return (
     <Grid 
       container 
-      spacing={4}>
+      spacing={4}
+      justify={props.forMobile ? 'center' : 'flex-start'}>
       {gridItems}
     </Grid>
   );
