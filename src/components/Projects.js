@@ -16,6 +16,7 @@ function Projects(props) {
   return (
     <Grid 
       container 
+      fluid
       spacing={4}
       justify={props.forMobile ? 'center' : 'flex-start'}>
       {gridItems}

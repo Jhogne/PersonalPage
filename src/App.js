@@ -28,16 +28,19 @@ class App extends React.Component {
     const contentHeight = this.state.isMobile ? (window.innerHeight - 300) : '100vh';
     return (
       <>
-        <Helmet>
+        <Helmet
+          >
           <title>Jonas Högne</title>
           <meta name='description' content="Jonas Högne's personal website and portfolio"/>
 
         </Helmet>
         <Grid 
           container 
-          className="bar"
+          className="layout"
+          spacing={1}
           style={{
-            overflowY: this.state.isMobile ? 'visible' : 'hidden'
+            overflowY: this.state.isMobile ? 'visible' : 'hidden',
+            overflowX:'hidden'
           }}
           >          
           <Grid item>
@@ -49,9 +52,10 @@ class App extends React.Component {
             className='content'
             style={{
               maxHeight: contentHeight,
-              overflowY: this.state.isMobile ? 'visible' : 'auto',  
-              overflowX: this.state.isMobile ? 'visible' : 'hidden',
-              paddingLeft: this.state.isMobile ? '0.5px': '25px',
+              backgroundColor:'white',
+              paddingLeft: this.state.isMobile ? 0: '25px',
+              overflowY:this.state.isMobile ? 'visible' : 'auto',
+              overflowX:this.state.isMobile ? 'visible' : 'hidden',
             }}>
             <Typography 
               variant="h2" 

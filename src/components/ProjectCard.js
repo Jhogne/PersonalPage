@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
   root: {
     maxWidth: 325,
     minHeight: 420,
-    borderRadius: 0,
+    borderRadius: 2,
   },
   content: {
     padding: 24,
