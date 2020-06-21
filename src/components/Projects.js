@@ -16,9 +16,10 @@ function Projects(props) {
   return (
     <Grid 
       container 
-      fluid
+      fluid='false'
       spacing={4}
-      justify={props.forMobile ? 'center' : 'flex-start'}>
+      justify={props.forMobile ? 'center' : 'flex-start'}
+      style={{padding:0}}>
       {gridItems}
     </Grid>
   );

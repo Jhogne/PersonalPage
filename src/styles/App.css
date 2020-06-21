@@ -1,5 +1,4 @@
 .html, body {
-  height: 100%; 
   overflow: hidden;
 }
 
@@ -31,6 +30,5 @@
 
 .layout{
   position: absolute;
-  top: 0;
-  left: 0;
+  width:100vw;
 }

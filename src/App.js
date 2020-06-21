@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet'
 import Grid from '@material-ui/core/Grid';
-import { Typography } from '@material-ui/core';
+import { Typography, Box } from '@material-ui/core';
 
 import Projects from 'components/Projects';
 import ReactiveBar from 'components/ReactiveBar'
@@ -27,7 +27,7 @@ class App extends React.Component {
   render() {
     const contentHeight = this.state.isMobile ? (window.innerHeight - 300) : '100vh';
     return (
-      <>
+      <Box style={{borderStyle:'solid', borderColor:'yellow'}}>
         <Helmet
           >
           <title>Jonas Högne</title>
@@ -37,14 +37,19 @@ class App extends React.Component {
         <Grid 
           container 
           className="layout"
-          spacing={1}
+          spacing={0}
           style={{
-            overflowY: this.state.isMobile ? 'visible' : 'hidden',
-            overflowX:'hidden'
+            overflowY: this.state.isMobile ? 'scroll' : 'hidden',
+            overflowX:'hidden',
+            width:'100vw',
+            padding:0,
+            margin:0,
+            top:0,
+            left:0,
           }}
           >          
           <Grid item>
-            <ReactiveBar forMobile={this.state.isMobile}/>
+            <ReactiveBar forMobile={this.state.isMobile} style={{width:'100vw',}}/>
           </Grid>
           <Grid 
             item 
@@ -66,7 +71,7 @@ class App extends React.Component {
             <Projects forMobile={this.state.isMobile} />
           </Grid>
         </Grid>
-      </>
+      </Box>
     );
   }
 }
