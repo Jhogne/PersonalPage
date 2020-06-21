@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet'
 import Grid from '@material-ui/core/Grid';
-import { Typography, Box } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 
 import Projects from 'components/Projects';
 import ReactiveBar from 'components/ReactiveBar'
