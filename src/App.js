@@ -27,57 +27,47 @@ class App extends React.Component {
   render() {
     const contentHeight = this.state.isMobile ? (window.innerHeight - 300) : '100vh';
     return (
-      <Box style={{borderStyle:'solid', borderColor:'yellow'}}>
-        <Helmet
-          >
+      <>
+        <Helmet>
           <title>Jonas Högne</title>
-          <meta name='description' content="Jonas Högne's personal website and portfolio"/>
-
+          <meta name='description' content="Jonas Högne's personal website and portfolio" />
         </Helmet>
-        <Grid 
-          container 
+        <Grid
+          container
           className="layout"
           spacing={0}
           style={{
             overflowY: this.state.isMobile ? 'scroll' : 'hidden',
-            overflowX:'hidden',
-            width:'100vw',
-            padding:0,
-            margin:0,
-            top:0,
-            left:0,
-          }}
-          >          
+            padding: 0,
+            margin: 0,
+            top: 0,
+            left: 0
+          }}>
           <Grid item>
-            <ReactiveBar forMobile={this.state.isMobile} style={{width:'100vw',}}/>
+            <ReactiveBar forMobile={this.state.isMobile} style={{ width: '100vw', }} />
           </Grid>
-          <Grid 
-            item 
-            xs 
+          <Grid
+            item
+            xs
             className='content'
             style={{
               maxHeight: contentHeight,
-              backgroundColor:'white',
-              paddingLeft: this.state.isMobile ? 0: '25px',
-              overflowY:this.state.isMobile ? 'visible' : 'auto',
-              overflowX:this.state.isMobile ? 'visible' : 'hidden',
+              backgroundColor: 'white',
+              paddingLeft: this.state.isMobile ? 0 : '25px',
+              overflowY: this.state.isMobile ? 'visible' : 'auto',
+              overflowX: this.state.isMobile ? 'visible' : 'hidden',
             }}>
-            <Typography 
-              variant="h2" 
+            <Typography
+              variant="h2"
               className='content-header'
-              style={{alignSelf:this.state.isMobile ? 'center' : 'auto'}}>
+              style={{ alignSelf: this.state.isMobile ? 'center' : 'auto' }}>
               What I have done
             </Typography>
             <Projects forMobile={this.state.isMobile} />
           </Grid>
         </Grid>
-      </Box>
+      </>
     );
   }
 }
 export default App;
-
-
-//overflowY: this.state.isMobile ? 'visible' : 'auto',
-//overflowX: this.state.isMobile ? 'auto' : 'hidden',
-//paddingLeft: this.state.isMobile ? 0: '25px',

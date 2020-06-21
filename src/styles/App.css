@@ -15,11 +15,11 @@
   margin-left: 10px;
 }
 
-.content{
+.content.content{
   display: flex;
   flex-direction: column;
+  overflow-x: 'hidden';
 }
-
 
 .content-header.content-header {
   color: #777777;
