@@ -25,7 +25,7 @@ const ProjectList = [
     language: "Python",
     icon: PythonIcon,
     keywords: '',
-    description: "In participated in advent of code 2019 for fun and used it as an opportunity to get some hands on experience with Python 3, since I had never actually programmed in Python before."
+    description: "I participated in advent of code 2019 for fun and used it as an opportunity to get some hands on experience with Python 3, since I had never actually programmed in Python before."
   },
 
 ];
