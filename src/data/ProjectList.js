@@ -7,7 +7,6 @@ const ProjectList = [
     title: "Typer",
     source: "https://github.com/Jhogne/typer",
     language: "Java & Javascript",
-    keywords: "React, AWS",
     icon: JavaIcon,
     //keywords: "typer.jonashogne.se",
     description:
