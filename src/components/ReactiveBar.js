@@ -24,13 +24,13 @@ function ReactiveBar(props) {
       </Typography>
       <div className="footer">
         <hr style={{ backgroundColor: '#eeeeee' }} />
-        <a href="https://www.linkedin.com/in/jonas-högne-661901170">
+        <a href="https://www.linkedin.com/in/jonas-hogne/">
           <LinkedinIcon className={styles.icon} />
         </a>
         <a href="https://www.github.com/JHogne">
           <GithubIcon className={styles.icon} />
         </a>
-        <a href="mailto:jonas.hogne@gmail.com">
+        <a href="mailto:jonas.hogne@protonmail.com">
           <MailIcon className={styles.icon} />
         </a>
       </div>

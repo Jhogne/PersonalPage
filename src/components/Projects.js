@@ -18,7 +18,11 @@ function Projects(props) {
       container 
       fluid='false'
       spacing={4}
+      alignItems='center'
       justify={props.forMobile ? 'center' : 'flex-start'}
+      alignItems='center'
+      alignContent='center'
+      textAlign='center'
       style={{padding:0}}>
       {gridItems}
     </Grid>

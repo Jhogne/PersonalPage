@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet'
 import Grid from '@material-ui/core/Grid';
-import { Typography } from '@material-ui/core';
 
 import Projects from 'components/Projects';
 import ReactiveBar from 'components/ReactiveBar'
@@ -10,8 +9,8 @@ import 'styles/App.css';
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = { isMobile: window.innerWidth <= 760 };
     this.resize = this.resize.bind(this);
   }
@@ -20,7 +19,7 @@ class App extends React.Component {
     window.addEventListener('resize', this.resize);
     this.resize();
   }
-  resize(props) {
+  resize() {
     this.setState({ isMobile: window.innerWidth <= 760 });
   }
 
@@ -48,21 +47,16 @@ class App extends React.Component {
           </Grid>
           <Grid
             item
+            container
             xs
-            className='content'
             style={{
               maxHeight: contentHeight,
               backgroundColor: 'white',
               paddingLeft: this.state.isMobile ? 0 : '25px',
               overflowY: this.state.isMobile ? 'visible' : 'auto',
               overflowX: this.state.isMobile ? 'visible' : 'hidden',
+              padding: '30px'
             }}>
-            <Typography
-              variant="h2"
-              className='content-header'
-              style={{ alignSelf: this.state.isMobile ? 'center' : 'auto' }}>
-              What I have done
-            </Typography>
             <Projects forMobile={this.state.isMobile} />
           </Grid>
         </Grid>
